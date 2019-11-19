@@ -22,8 +22,8 @@ if (process.env.NODE_ENV === "development") {
 } else {
   config.plugins = [
     new webpack.DefinePlugin({
-      DIRECTORY_OAUTH_CLIENT_ID: process.env.DIRECTORY_OAUTH_CLIENT_ID,
-      DIRECTORY_HOST: process.env.DIRECTORY_HOST
+      DIRECTORY_OAUTH_CLIENT_ID: JSON.stringify(process.env.DIRECTORY_OAUTH_CLIENT_ID),
+      DIRECTORY_HOST: JSON.stringify(process.env.DIRECTORY_HOST)
     })
   ];
 }
