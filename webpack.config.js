@@ -1,7 +1,7 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
-module.exports = {
+let config = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
@@ -13,9 +13,11 @@ module.exports = {
     publicPath: '/assets/',
     open: true,
     historyApiFallback: true
-  },
-
-  plugins: [
-    new Dotenv()
-  ]
+  }
 };
+
+if (process.env.NODE_ENV === 'development') {
+  config.plugins = [new Dotenv()]
+}
+
+module.exports = config;
