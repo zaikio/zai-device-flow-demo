@@ -54,7 +54,7 @@ axios
       axios
         .get(process.env.DIRECTORY_HOST + "/api/v1/sites.json")
         .then(siteResponse => {
-          const siteId = siteResponse.data[0].id;
+          const siteId = siteResponse.data.length ? siteResponse.data[0].id : undefined;
           // 4. Create Machine
           axios
             .post(process.env.DIRECTORY_HOST + "/api/v1/machines.json", {
@@ -66,10 +66,21 @@ axios
                 kind: "digital_press"
               }
             })
-            .then(() => {
+            .then(machineResponse => {
               console.log("CREATED MACHINE");
-              document.getElementById("user_code").innerHTML = "";
-              document.getElementById("qr_code").innerHTML = "MACHINE CREATED!";
+              // 5. Take ownership of machine
+              axios
+                .post(
+                  process.env.DIRECTORY_HOST +
+                    "/api/v1/machines/" +
+                    machineResponse.data.id +
+                    "/machine_ownership.json"
+                )
+                .then(() => {
+                  document.getElementById("user_code").innerHTML = "";
+                  document.getElementById("qr_code").innerHTML =
+                    "MACHINE CREATED!";
+                });
             });
         });
 
