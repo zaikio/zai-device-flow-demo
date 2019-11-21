@@ -68,6 +68,8 @@ axios
             })
             .then(() => {
               console.log("CREATED MACHINE");
+              document.getElementById("user_code").innerHTML = "";
+              document.getElementById("qr_code").innerHTML = "MACHINE CREATED!";
             });
         });
 
