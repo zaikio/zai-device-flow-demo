@@ -1,4 +1,6 @@
-# hc-dummy-machine
+# zai-device-flow-demo
+
+[Zaikio Device Flow Demo](https://docs.zaiku.cloud/guide/oauth/device-flow.html). This app connects to an organization and automatically creates a machine for that organization by using a QR Code (IoT).
 
 ## Getting Started
 
