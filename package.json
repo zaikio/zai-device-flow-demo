@@ -14,7 +14,7 @@
   },
   "author": "Crispy Mountain GmbH",
   "devDependencies": {
-    "webpack": "^4.44.2",
+    "webpack": "^5.10.3",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
   },
