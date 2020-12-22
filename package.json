@@ -19,7 +19,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "axios-request-handler": "^1.0.4",
     "dotenv-webpack": "^6.0.0",
     "qrcode-generator": "^1.4.4"
