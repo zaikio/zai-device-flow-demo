@@ -21,7 +21,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "axios-request-handler": "^1.0.4",
-    "dotenv-webpack": "^6.0.4",
+    "dotenv-webpack": "^7.0.1",
     "qrcode-generator": "^1.4.4"
   }
 }
