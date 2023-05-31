@@ -16,7 +16,7 @@ axios
     process.env.DIRECTORY_HOST + "/oauth/device_authorizations/authorize.json",
     {
       client_id: process.env.DIRECTORY_OAUTH_CLIENT_ID,
-      scope: "Org.directory.machines.rw"
+      scope: "Org.zaikio.machines.rw"
     }
   )
   .then(response => {
